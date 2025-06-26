@@ -113,8 +113,8 @@
                 {
                     "atomType": "Rotate",
                     "name": "Rotate",
-                    "x": 0.6845238095238095,
-                    "y": 0.6480446927374302,
+                    "x": 0.6183862433862434,
+                    "y": 0.3910614525139665,
                     "uniqueID": "8299215b-4ee6-41e6-8bc1-1ab96c738f62",
                     "ioValues": [
                         {
@@ -305,8 +305,8 @@
                 {
                     "atomType": "Move",
                     "name": "Move",
-                    "x": 0.4411375661375661,
-                    "y": 0.6368715083798883,
+                    "x": 0.37632275132275134,
+                    "y": 0.8379888268156425,
                     "uniqueID": "1a05e2cf-5f08-4852-9ef1-c447581d3b98",
                     "ioValues": [
                         {
@@ -331,13 +331,13 @@
                 {
                     "atomType": "Assembly",
                     "name": "Assembly",
-                    "x": 0.576058201058201,
-                    "y": 0.7262569832402235,
+                    "x": 0.5873015873015873,
+                    "y": 0.7346368715083799,
                     "uniqueID": "107c3c23-c62b-4b46-977c-0939ae158eb7",
                     "ioValues": [
                         {
                             "name": "Shape 1",
-                            "ioValue": ""
+                            "ioValue": "1a05e2cf-5f08-4852-9ef1-c447581d3b98"
                         },
                         {
                             "name": "Shape 2",
@@ -885,8 +885,8 @@
         {
             "atomType": "GitHubMolecule",
             "name": "HalfLap",
-            "x": 0.45502645502645506,
-            "y": 0.5893854748603352,
+            "x": 0.4947089947089947,
+            "y": 0.6396648044692737,
             "uniqueID": "41ea230c-4c26-4588-894a-7d324f2914ae",
             "ioValues": [
                 {
@@ -1487,6 +1487,6 @@
     ],
     "unitsKey": "MM",
     "fileTypeVersion": 1,
-    "compiledBom": {},
+    "compiledBom": [],
     "filetypeVersion": 1
 }
