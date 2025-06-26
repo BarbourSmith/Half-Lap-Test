@@ -14,14 +14,19 @@
             "x": 0.98,
             "y": 0.5,
             "uniqueID": "51c1caa5-8e1e-4fcf-b206-f4ab3d284c71",
-            "ioValues": [],
+            "ioValues": [
+                {
+                    "name": "number or geometry",
+                    "ioValue": "41ea230c-4c26-4588-894a-7d324f2914ae"
+                }
+            ],
             "description": "Connect geometry here to make it available in the next level up. "
         },
         {
             "atomType": "Molecule",
             "name": "Ring",
-            "x": 0.22354497354497355,
-            "y": 0.25977653631284914,
+            "x": 0.23015873015873015,
+            "y": 0.2849162011173184,
             "uniqueID": "36047705-8b56-4cc9-881b-262c67376885",
             "ioValues": [],
             "description": "Molecules provide an organizational structure to contain atoms. Double click on a molecule to enter it. Use the up arrow in the upper right hand corner of the screen to go up one level.",
@@ -90,8 +95,8 @@
                 {
                     "atomType": "Extrude",
                     "name": "Extrude",
-                    "x": 0.3862433862433862,
-                    "y": 0.2122905027932961,
+                    "x": 0.3505291005291006,
+                    "y": 0.1759776536312849,
                     "uniqueID": "ffeb49c5-1816-4684-85c1-e0a82533ae10",
                     "ioValues": [
                         {
@@ -108,8 +113,8 @@
                 {
                     "atomType": "Rotate",
                     "name": "Rotate",
-                    "x": 0.4722222222222222,
-                    "y": 0.6508379888268156,
+                    "x": 0.6845238095238095,
+                    "y": 0.6480446927374302,
                     "uniqueID": "8299215b-4ee6-41e6-8bc1-1ab96c738f62",
                     "ioValues": [
                         {
@@ -134,8 +139,8 @@
                 {
                     "atomType": "GitHubMolecule",
                     "name": "Linear-Pattern",
-                    "x": 0.6514550264550264,
-                    "y": 0.5083798882681565,
+                    "x": 0.7685185185185185,
+                    "y": 0.34916201117318435,
                     "uniqueID": "0b4006ab-c42a-4b6f-87d9-69d951f74a8f",
                     "ioValues": [
                         {
@@ -296,6 +301,50 @@
                     "unitsKey": "MM",
                     "fileTypeVersion": 1,
                     "compiledBom": []
+                },
+                {
+                    "atomType": "Move",
+                    "name": "Move",
+                    "x": 0.4411375661375661,
+                    "y": 0.6368715083798883,
+                    "uniqueID": "1a05e2cf-5f08-4852-9ef1-c447581d3b98",
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": "ffeb49c5-1816-4684-85c1-e0a82533ae10"
+                        },
+                        {
+                            "name": "xDist",
+                            "ioValue": -10
+                        },
+                        {
+                            "name": "yDist",
+                            "ioValue": 0
+                        },
+                        {
+                            "name": "zDist",
+                            "ioValue": 0
+                        }
+                    ],
+                    "description": "Moves a shape laterally in X, Y, Z."
+                },
+                {
+                    "atomType": "Assembly",
+                    "name": "Assembly",
+                    "x": 0.576058201058201,
+                    "y": 0.7262569832402235,
+                    "uniqueID": "107c3c23-c62b-4b46-977c-0939ae158eb7",
+                    "ioValues": [
+                        {
+                            "name": "Shape 1",
+                            "ioValue": ""
+                        },
+                        {
+                            "name": "Shape 2",
+                            "ioValue": "ffeb49c5-1816-4684-85c1-e0a82533ae10"
+                        }
+                    ],
+                    "description": "Pick between assembly and fusion to join input geometries. Assembly takes multiple shapes together into one, shapes higher in the inputs list will cut into shapes lower on the input list where they overlap. Fusion takes all shapes or sketches and fuses them permanently into a single shape"
                 }
             ],
             "allConnectors": [
@@ -329,6 +378,20 @@
                 },
                 {
                     "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": "ffeb49c5-1816-4684-85c1-e0a82533ae10",
+                    "ap2ID": "1a05e2cf-5f08-4852-9ef1-c447581d3b98"
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "Shape 2",
+                    "ap2Primary": false,
+                    "ap1ID": "ffeb49c5-1816-4684-85c1-e0a82533ae10",
+                    "ap2ID": "107c3c23-c62b-4b46-977c-0939ae158eb7"
+                },
+                {
+                    "ap1Name": "geometry",
                     "ap2Name": "Geometry",
                     "ap2Primary": false,
                     "ap1ID": "8299215b-4ee6-41e6-8bc1-1ab96c738f62",
@@ -340,6 +403,13 @@
                     "ap2Primary": false,
                     "ap1ID": "0b4006ab-c42a-4b6f-87d9-69d951f74a8f",
                     "ap2ID": "6995620e-3af2-4eac-81ee-374049b8fcb5"
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "Shape 1",
+                    "ap2Primary": false,
+                    "ap1ID": "1a05e2cf-5f08-4852-9ef1-c447581d3b98",
+                    "ap2ID": "107c3c23-c62b-4b46-977c-0939ae158eb7"
                 }
             ],
             "fileTypeVersion": 1,
@@ -361,14 +431,19 @@
                     "x": 0.98,
                     "y": 0.5,
                     "uniqueID": "70f52f4a-f723-459d-b77e-d0a6f0647212",
-                    "ioValues": [],
+                    "ioValues": [
+                        {
+                            "name": "number or geometry",
+                            "ioValue": "3e266a0e-2c83-4f52-9648-0cc936bdf652"
+                        }
+                    ],
                     "description": "Connect geometry here to make it available in the next level up. "
                 },
                 {
                     "atomType": "Rectangle",
                     "name": "Rectangle",
-                    "x": 0.20965608465608468,
-                    "y": 0.5754189944134078,
+                    "x": 0.06349206349206349,
+                    "y": 0.5027932960893855,
                     "uniqueID": "f9e3e906-65a9-410b-8015-cb4cf0b0a953",
                     "ioValues": [
                         {
@@ -377,18 +452,1039 @@
                         },
                         {
                             "name": "y length",
-                            "ioValue": 10
+                            "ioValue": 50
                         }
                     ],
                     "description": "Creates a new rectangle."
+                },
+                {
+                    "atomType": "Extrude",
+                    "name": "Extrude",
+                    "x": 0.14417989417989419,
+                    "y": 0.5027932960893855,
+                    "uniqueID": "51ad9028-9b46-4f20-b008-ee05ff331ba9",
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": "f9e3e906-65a9-410b-8015-cb4cf0b0a953"
+                        },
+                        {
+                            "name": "height",
+                            "ioValue": 10
+                        }
+                    ],
+                    "description": "Extrudes a 2D shape. Input can be negitive. "
+                },
+                {
+                    "atomType": "Rotate",
+                    "name": "Rotate",
+                    "x": 0.3505291005291006,
+                    "y": 0.5782122905027933,
+                    "uniqueID": "ff94d63a-f33b-4131-9b65-b79ac70507da",
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": "9f0739a7-07c7-4575-a093-9aabde68ddf3"
+                        },
+                        {
+                            "name": "x-axis degrees",
+                            "ioValue": 0
+                        },
+                        {
+                            "name": "y-axis degrees",
+                            "ioValue": 90
+                        },
+                        {
+                            "name": "z-axis degrees",
+                            "ioValue": 0
+                        }
+                    ],
+                    "description": "Rotates the input geometry around the X, Y, or Z axis. Inputs are degrees."
+                },
+                {
+                    "atomType": "Move",
+                    "name": "Move",
+                    "x": 0.4398148148148148,
+                    "y": 0.5027932960893855,
+                    "uniqueID": "54be11f8-2d90-48f0-8585-d800b666b3ab",
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": "ff94d63a-f33b-4131-9b65-b79ac70507da"
+                        },
+                        {
+                            "name": "xDist",
+                            "ioValue": 0
+                        },
+                        {
+                            "name": "yDist",
+                            "ioValue": 500
+                        },
+                        {
+                            "name": "zDist",
+                            "ioValue": 0
+                        }
+                    ],
+                    "description": "Moves a shape laterally in X, Y, Z."
+                },
+                {
+                    "atomType": "GitHubMolecule",
+                    "name": "RotatePattern",
+                    "x": 0.5972222222222222,
+                    "y": 0.5977653631284916,
+                    "uniqueID": "d39e9366-6cf6-4a6d-9b81-c5a3ca1e5f0e",
+                    "ioValues": [
+                        {
+                            "name": "Shape",
+                            "ioValue": "54be11f8-2d90-48f0-8585-d800b666b3ab"
+                        },
+                        {
+                            "name": "Number",
+                            "ioValue": 8
+                        },
+                        {
+                            "name": "Angle",
+                            "ioValue": 45
+                        }
+                    ],
+                    "description": "Molecules provide an organizational structure to contain atoms. Double click on a molecule to enter it. Use the up arrow in the upper right hand corner of the screen to go up one level.",
+                    "topLevel": false,
+                    "allAtoms": [
+                        {
+                            "atomType": "Output",
+                            "name": "Output",
+                            "x": 0.98,
+                            "y": 0.5,
+                            "uniqueID": "8d69a1f3-1e28-49d0-9c85-9ec645a88cb9",
+                            "ioValues": [
+                                {
+                                    "name": "number or geometry",
+                                    "ioValue": "3f535c24-1b2b-43c8-b5f2-4d09390725af"
+                                }
+                            ],
+                            "description": "Connect geometry here to make it available in the next level up. "
+                        },
+                        {
+                            "atomType": "Input",
+                            "name": "Shape",
+                            "x": 0.029699999999999997,
+                            "y": 0.3788300835654596,
+                            "uniqueID": "9633c50a-aab8-42be-80ad-51b205a293db",
+                            "ioValues": [],
+                            "description": "Adds an input to the parent molecule. If the parent molecule is the top level of the project then the input will be available when the project is shared or imported into another project. Name is editable"
+                        },
+                        {
+                            "atomType": "Input",
+                            "name": "Number",
+                            "x": 0.029699999999999997,
+                            "y": 0.8440111420612814,
+                            "uniqueID": "67c0029a-d916-414f-91c7-2b184c1fa1f2",
+                            "ioValues": [],
+                            "description": "Adds an input to the parent molecule. If the parent molecule is the top level of the project then the input will be available when the project is shared or imported into another project. Name is editable"
+                        },
+                        {
+                            "atomType": "Input",
+                            "name": "Angle",
+                            "x": 0.029699999999999997,
+                            "y": 0.5821727019498607,
+                            "uniqueID": "6e20bb3b-69dc-4690-b291-9a6eb6e47c55",
+                            "ioValues": [],
+                            "description": "Adds an input to the parent molecule. If the parent molecule is the top level of the project then the input will be available when the project is shared or imported into another project. Name is editable"
+                        },
+                        {
+                            "atomType": "Circle",
+                            "name": "Circle",
+                            "x": 0.19136960600375233,
+                            "y": 0.20055710306406688,
+                            "uniqueID": "6775cb73-5d9e-4472-909b-cbdfefaf92c6",
+                            "ioValues": [
+                                {
+                                    "name": "diameter",
+                                    "ioValue": 10
+                                }
+                            ],
+                            "description": "Creates a new circle."
+                        },
+                        {
+                            "atomType": "Move",
+                            "name": "Move",
+                            "x": 0.2786116322701689,
+                            "y": 0.36490250696378834,
+                            "uniqueID": "919abdeb-6ce9-420d-906c-cc5d6b60efe3",
+                            "ioValues": [
+                                {
+                                    "name": "geometry",
+                                    "ioValue": "6775cb73-5d9e-4472-909b-cbdfefaf92c6"
+                                },
+                                {
+                                    "name": "xDist",
+                                    "ioValue": 100
+                                },
+                                {
+                                    "name": "yDist",
+                                    "ioValue": 0
+                                },
+                                {
+                                    "name": "zDist",
+                                    "ioValue": 0
+                                }
+                            ],
+                            "description": "Moves a shape laterally in X, Y, Z."
+                        },
+                        {
+                            "atomType": "Code",
+                            "name": "Code",
+                            "x": 0.5741525423728814,
+                            "y": 0.6072423398328691,
+                            "uniqueID": "3f535c24-1b2b-43c8-b5f2-4d09390725af",
+                            "ioValues": [
+                                {
+                                    "name": "Shape",
+                                    "ioValue": "54be11f8-2d90-48f0-8585-d800b666b3ab"
+                                },
+                                {
+                                    "name": "Number",
+                                    "ioValue": 8
+                                },
+                                {
+                                    "name": "Angle",
+                                    "ioValue": 45
+                                }
+                            ],
+                            "description": "Defines a Replicad code block.",
+                            "codeVersion": 1,
+                            "code": "//Inputs:[Shape, Number, Angle];\n\n\nlet shapesArray = [];\nfor (let i = 0; i < Number; i++) {\n    let rotatedShape = await Rotate(Shape, 0, 0, Angle * i);\n    shapesArray.push(rotatedShape);\n}\n\nlet assembledShape = await Assembly(shapesArray)\n\nreturn assembledShape;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    /**\n    To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n    If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n    Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n    https://replicad.xyz/docs/introapp/UserGuide.html \n    Return a replicad object that includes geometry, color, tags and plane. \n\n\n    Example Code Atom:\n\n      Inputs:[shape, x];\n\n      let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n\n      return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n      - See more examples at _______ \n\n\n    */\n"
+                        },
+                        {
+                            "atomType": "Extrude",
+                            "name": "Extrude",
+                            "x": 0.4586864406779661,
+                            "y": 0.2618384401114206,
+                            "uniqueID": "6e7290aa-2608-46ce-9bba-e8f8d037ea9b",
+                            "ioValues": [
+                                {
+                                    "name": "geometry",
+                                    "ioValue": "919abdeb-6ce9-420d-906c-cc5d6b60efe3"
+                                },
+                                {
+                                    "name": "height",
+                                    "ioValue": 10
+                                }
+                            ],
+                            "description": "Extrudes a 2D shape. Input can be negitive. "
+                        }
+                    ],
+                    "allConnectors": [
+                        {
+                            "ap1Name": "number or geometry",
+                            "ap2Name": "Shape",
+                            "ap2Primary": false,
+                            "ap1ID": "9633c50a-aab8-42be-80ad-51b205a293db",
+                            "ap2ID": "3f535c24-1b2b-43c8-b5f2-4d09390725af"
+                        },
+                        {
+                            "ap1Name": "number or geometry",
+                            "ap2Name": "Number",
+                            "ap2Primary": false,
+                            "ap1ID": "67c0029a-d916-414f-91c7-2b184c1fa1f2",
+                            "ap2ID": "3f535c24-1b2b-43c8-b5f2-4d09390725af"
+                        },
+                        {
+                            "ap1Name": "number or geometry",
+                            "ap2Name": "Angle",
+                            "ap2Primary": false,
+                            "ap1ID": "6e20bb3b-69dc-4690-b291-9a6eb6e47c55",
+                            "ap2ID": "3f535c24-1b2b-43c8-b5f2-4d09390725af"
+                        },
+                        {
+                            "ap1Name": "geometry",
+                            "ap2Name": "geometry",
+                            "ap2Primary": true,
+                            "ap1ID": "6775cb73-5d9e-4472-909b-cbdfefaf92c6",
+                            "ap2ID": "919abdeb-6ce9-420d-906c-cc5d6b60efe3"
+                        },
+                        {
+                            "ap1Name": "geometry",
+                            "ap2Name": "geometry",
+                            "ap2Primary": true,
+                            "ap1ID": "919abdeb-6ce9-420d-906c-cc5d6b60efe3",
+                            "ap2ID": "6e7290aa-2608-46ce-9bba-e8f8d037ea9b"
+                        },
+                        {
+                            "ap1Name": "geometry",
+                            "ap2Name": "number or geometry",
+                            "ap2Primary": false,
+                            "ap1ID": "3f535c24-1b2b-43c8-b5f2-4d09390725af",
+                            "ap2ID": "8d69a1f3-1e28-49d0-9c85-9ec645a88cb9"
+                        }
+                    ],
+                    "parentRepo": {
+                        "lastFoundGit": "2025-03-02T16:20:37.798Z",
+                        "repoName": "RotatePattern",
+                        "dateCreated": "2024-10-01T18:14:59Z",
+                        "readMe": "https://raw.githubusercontent.com/BarbourSmith/RotatePattern/master/README.md?sanitize=true",
+                        "yyyy": 2024,
+                        "topMoleculeID": 1727806499549,
+                        "githubMoleculesUsed": [],
+                        "html_url": "https://github.com/BarbourSmith/RotatePattern",
+                        "topics": [],
+                        "parentRepo": null,
+                        "forks": 1,
+                        "dateModified": "739160",
+                        "ranking": 0,
+                        "searchField": "rotatepattern barboursmith",
+                        "owner": "BarbourSmith",
+                        "description": "",
+                        "contentURL": "https://raw.githubusercontent.com/BarbourSmith/RotatePattern/master/project.abundance?sanitize=true",
+                        "svgURL": "https://raw.githubusercontent.com/BarbourSmith/RotatePattern/master/project.svg?sanitize=true",
+                        "isLocal": false
+                    },
+                    "unitsKey": "Inches",
+                    "fileTypeVersion": 1,
+                    "compiledBom": []
+                },
+                {
+                    "atomType": "Rotate",
+                    "name": "Rotate",
+                    "x": 0.7314814814814815,
+                    "y": 0.5837988826815642,
+                    "uniqueID": "3e266a0e-2c83-4f52-9648-0cc936bdf652",
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": "d39e9366-6cf6-4a6d-9b81-c5a3ca1e5f0e"
+                        },
+                        {
+                            "name": "x-axis degrees",
+                            "ioValue": 0
+                        },
+                        {
+                            "name": "y-axis degrees",
+                            "ioValue": 90
+                        },
+                        {
+                            "name": "z-axis degrees",
+                            "ioValue": 0
+                        }
+                    ],
+                    "description": "Rotates the input geometry around the X, Y, or Z axis. Inputs are degrees."
+                },
+                {
+                    "atomType": "Move",
+                    "name": "Move",
+                    "x": 0.18716931216931218,
+                    "y": 0.835195530726257,
+                    "uniqueID": "6fdeed94-ba5f-4bd0-a5f1-382bbe69991f",
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": "51ad9028-9b46-4f20-b008-ee05ff331ba9"
+                        },
+                        {
+                            "name": "xDist",
+                            "ioValue": 0
+                        },
+                        {
+                            "name": "yDist",
+                            "ioValue": 0
+                        },
+                        {
+                            "name": "zDist",
+                            "ioValue": -10
+                        }
+                    ],
+                    "description": "Moves a shape laterally in X, Y, Z."
+                },
+                {
+                    "atomType": "Assembly",
+                    "name": "Assembly",
+                    "x": 0.2566137566137566,
+                    "y": 0.7262569832402235,
+                    "uniqueID": "9f0739a7-07c7-4575-a093-9aabde68ddf3",
+                    "ioValues": [
+                        {
+                            "name": "Shape 1",
+                            "ioValue": "6fdeed94-ba5f-4bd0-a5f1-382bbe69991f"
+                        },
+                        {
+                            "name": "Shape 2",
+                            "ioValue": "51ad9028-9b46-4f20-b008-ee05ff331ba9"
+                        }
+                    ],
+                    "description": "Pick between assembly and fusion to join input geometries. Assembly takes multiple shapes together into one, shapes higher in the inputs list will cut into shapes lower on the input list where they overlap. Fusion takes all shapes or sketches and fuses them permanently into a single shape"
                 }
             ],
-            "allConnectors": [],
+            "allConnectors": [
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": "f9e3e906-65a9-410b-8015-cb4cf0b0a953",
+                    "ap2ID": "51ad9028-9b46-4f20-b008-ee05ff331ba9"
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": "51ad9028-9b46-4f20-b008-ee05ff331ba9",
+                    "ap2ID": "6fdeed94-ba5f-4bd0-a5f1-382bbe69991f"
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "Shape 2",
+                    "ap2Primary": false,
+                    "ap1ID": "51ad9028-9b46-4f20-b008-ee05ff331ba9",
+                    "ap2ID": "9f0739a7-07c7-4575-a093-9aabde68ddf3"
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": "ff94d63a-f33b-4131-9b65-b79ac70507da",
+                    "ap2ID": "54be11f8-2d90-48f0-8585-d800b666b3ab"
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "Shape",
+                    "ap2Primary": false,
+                    "ap1ID": "54be11f8-2d90-48f0-8585-d800b666b3ab",
+                    "ap2ID": "d39e9366-6cf6-4a6d-9b81-c5a3ca1e5f0e"
+                },
+                {
+                    "ap1Name": "Geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": "d39e9366-6cf6-4a6d-9b81-c5a3ca1e5f0e",
+                    "ap2ID": "3e266a0e-2c83-4f52-9648-0cc936bdf652"
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "number or geometry",
+                    "ap2Primary": false,
+                    "ap1ID": "3e266a0e-2c83-4f52-9648-0cc936bdf652",
+                    "ap2ID": "70f52f4a-f723-459d-b77e-d0a6f0647212"
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "Shape 1",
+                    "ap2Primary": false,
+                    "ap1ID": "6fdeed94-ba5f-4bd0-a5f1-382bbe69991f",
+                    "ap2ID": "9f0739a7-07c7-4575-a093-9aabde68ddf3"
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": "9f0739a7-07c7-4575-a093-9aabde68ddf3",
+                    "ap2ID": "ff94d63a-f33b-4131-9b65-b79ac70507da"
+                }
+            ],
             "fileTypeVersion": 1,
-            "compiledBom": {}
+            "compiledBom": []
+        },
+        {
+            "atomType": "GitHubMolecule",
+            "name": "HalfLap",
+            "x": 0.45502645502645506,
+            "y": 0.5893854748603352,
+            "uniqueID": "41ea230c-4c26-4588-894a-7d324f2914ae",
+            "ioValues": [
+                {
+                    "name": "Assembly1",
+                    "ioValue": "36047705-8b56-4cc9-881b-262c67376885"
+                },
+                {
+                    "name": "Assembly2",
+                    "ioValue": "ff4416c8-cd15-4380-9f93-de58448934f5"
+                }
+            ],
+            "description": "Molecules provide an organizational structure to contain atoms. Double click on a molecule to enter it. Use the up arrow in the upper right hand corner of the screen to go up one level.",
+            "topLevel": false,
+            "allAtoms": [
+                {
+                    "atomType": "Output",
+                    "name": "Output",
+                    "x": 0.98,
+                    "y": 0.5,
+                    "uniqueID": "b204fff1-5e20-4658-a839-5cc8691f5fe8",
+                    "ioValues": [
+                        {
+                            "name": "number or geometry",
+                            "ioValue": "2e438740-337b-4980-b5c3-4a22a445dab2"
+                        }
+                    ],
+                    "description": "Connect geometry here to make it available in the next level up. "
+                },
+                {
+                    "atomType": "Code",
+                    "name": "Code",
+                    "x": 0.6803385416666666,
+                    "y": 0.5297619047619048,
+                    "uniqueID": "9df4ca4a-a489-492c-8509-49a1a5fbc80b",
+                    "ioValues": [
+                        {
+                            "name": "shape1",
+                            "ioValue": 10
+                        },
+                        {
+                            "name": "shape2",
+                            "ioValue": 10
+                        }
+                    ],
+                    "description": "Defines a Replicad code block.",
+                    "codeVersion": 1,
+                    "code": " \n      //Inputs:[shape1, shape2]\n      //This defines the molecules inputs and creates variables with the same names which can be referenced in the code\n\n\n      // Move intersector to the point of interest instead of always being at 0,0\n      // handle assembly inputs\n      // how to handle intersection shapes not aligned to z axis?\n          // this will break our cube cut logic\n      // better logic for selecting axis of sharing\nfunction rectFromBounds(bounds) {\n  console.log(\"make rect\")\n  console.log(bounds);\n  \n  let baseRectangle = replicad.drawRectangle(Math.abs(bounds[0][0] - bounds[1][0]), Math.abs(bounds[0][1] - bounds[1][1]))\n  const yPlane = new replicad.Plane().pivot(0, 'Y');\n  //And we extrude the shape to make it 3D\n  let createdShape = baseRectangle.sketchOnPlane(yPlane).extrude(Math.abs(bounds[0][2] - bounds[1][2]))\n  const transform = [\n    (bounds[0][0] + bounds[1][0]) / 2.0,\n    (bounds[0][1] + bounds[1][1]) / 2.0,\n    bounds[0][2]\n    ];\n  console.log(transform)\n  createdShape = createdShape.translate(transform)\n  let cube = {\n      geometry: [createdShape], \n      tags: [],\n      color: '#A3CE5B',\n      plane: yPlane,\n      bom: []\n  }\n\n  \n  return cube\n}\n\nasync function performHalfLap(shape1, shape2) {\n\n  //Takes the address and gets the shape from the library\n\n  let intersect = await Intersect(shape1, shape2)\n  // get z bounds\n  console.log(\"foo\")\n  console.log(intersect)\n  console.log(intersect.geometry[0].boundingBox)\n  let boundingBox = intersect.geometry[0].boundingBox\n  let newBounds = undefined;\n  try {\n    newBounds = boundingBox.bounds;\n  } catch (error) {\n    // there' isn't an intersecting volume\n    console.log(\"no intersection. returning shape1 unmodified\")\n    return shape1\n  }\n\n  console.log(\" bounds \")\n  console.log(newBounds)\n\n  newBounds[1][2] = (newBounds[0][2] + newBounds[1][2]) / 2.0;\n  let halfIntersect = rectFromBounds(newBounds)\n  console.log(halfIntersect)\n\n  // create cube to reduce to half of the intersection\n  // do the cutting\n // let remover = intersect.geometry[0].cut(halfIntersect.geometry[0])\n\n  // merge the half-intersection with one of our inputs (either?)\n  let newShape1 = {\n    geometry: [shape1.geometry[0].clone().cut(halfIntersect.geometry[0])],\n    tags: shape1.tags || [],\n    color: shape1.color,\n    plane: shape1.plane,\n    bom: shape1.bom || []\n  };\n  console.log(\"result for leaf: \")\n  console.log(newShape1)\n\n  return newShape1;\n//  return await Assembly([shape2, newShape1])//, cube]);\n}\n\n// choose midpoint\n         console.log(\"starting... \");\n         console.log(shape1)\n         console.log(shape2)\n         if (library[shape1] == undefined) {\n           throw new Error(\"Shape1 \" + shape1 + \" not a geometry id\")\n         }\n         if (library[shape2] == undefined) {\n           throw new Error(\"Shape2 \" + shape2 + \" not a geometry id\")\n         }\n\n         // TODO: someday we should pass the geoms directly, user should never have to deal with\n         // library lookups imo\n         shape1 = library[shape1]\n         shape2 = library[shape2]\n         \n\n         s2AsList = await AssemblyAsIterable(shape2);\n         console.log(\"s2AsList: \")\n         console.log(s2AsList);\n         let updatedShape1 = await AssemblyMap(shape1, async (s1leaf, _) => {\n          // let individualIntersects = AssemblyMap(shape2, (s2leaf, _) => {\n           //  return performHalfLap(s1leaf, s2leaf)\n           //})\n          // return individualIntersects;\n            for (const el of s2AsList) {\n              s1leaf = await performHalfLap(s1leaf, el)\n            }\n            return s1leaf\n          })\n         console.log(\"done\");\n         console.log(updatedShape1)\n         const newShape2 = CutAssembly(shape2, [updatedShape1])\n         return Assembly([updatedShape1, newShape2])\n\n      \n\n      \n\n//      return Intersect(shape1, shape2)\n\n\n\n      //This makes a new copy of of the shape (to prevent garbage collection issues),\n      //and moves it in the X direction. Note that this will not work if the input is an assembly\n      /*let movedShape = importedShape.geometry[0].clone().translate([dist,0,0])\n      \n      //Console.log works for debugging to better see what is happening under the hood\n      console.log(\"Shape:\")\n      console.log(importedShape);\n      \n      //Shapes stored in the library have tags, a color, a plane, and a bill of materials like this. We don't modify them here\n      let shape1 = {\n        geometry: [movedShape],\n        tags: importedShape.tags,\n        color: importedShape.color,\n        plane: importedShape.plane,\n        bom: importedShape.bom\n      }\n      \n      //We could at this point return shape1 as a complete shape and it will be automatically written to the library for us\n      //return shape1\n      \n      //We can also create a new shape from scratch\n      let createdRectangle = replicad.drawRectangle(5,7)\n      //This is the plane we are going to put our new shape on\n      const newPlane = new Plane().pivot(0, 'Y');\n      //And we extrude the shape to make it 3D\n      let createdShape = createdRectangle.sketchOnPlane(newPlane).extrude(height)\n      \n      //For our new geometry we need to define the tags, color, plane, etc\n      let shape2 = {\n          geometry: [createdShape], \n          tags: [\"aTag\"],\n          color: '#A3CE5B',\n          plane: newPlane,\n          bom: []\n      }\n      \n      //Then we can return our created shape in just the same way\n      //return shape2\n      \n      //If we want to return both shapes at once, we can create an assembly with them\n      let anAssembly = {\n        geometry: [shape1, shape2], \n        tags: [\"aNewTag\"],\n        color: '#A3CF5B',\n        plane: newPlane,\n        bom: []\n      }\n      \n      //And we can return that in the same way\n      return anAssembly\n      \n      \n          /**\n          To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n          If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n          Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n          https://replicad.xyz/docs/introapp/UserGuide.html \n          Return a replicad object that includes geometry, color, tags and plane. \n      \n      \n          Example Code Atom:\n      \n            Inputs:[shape, x];\n      \n            let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n      \n            return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n      \n            - See more examples at _______ \n      \n      \n          */\n      "
+                },
+                {
+                    "atomType": "Rectangle",
+                    "name": "Rectangle",
+                    "x": 0.22135416666666666,
+                    "y": 0.5446428571428571,
+                    "uniqueID": "3dd63a27-c007-4813-baa0-6c05e3a89379",
+                    "ioValues": [
+                        {
+                            "name": "x length",
+                            "ioValue": 15
+                        },
+                        {
+                            "name": "y length",
+                            "ioValue": 50
+                        }
+                    ],
+                    "description": "Creates a new rectangle."
+                },
+                {
+                    "atomType": "Extrude",
+                    "name": "Extrude",
+                    "x": 0.314453125,
+                    "y": 0.5595238095238095,
+                    "uniqueID": "ca095cc1-be2a-488f-b812-f56ea339c71f",
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": "3dd63a27-c007-4813-baa0-6c05e3a89379"
+                        },
+                        {
+                            "name": "height",
+                            "ioValue": 5
+                        }
+                    ],
+                    "description": "Extrudes a 2D shape. Input can be negitive. "
+                },
+                {
+                    "atomType": "Rectangle",
+                    "name": "Rectangle",
+                    "x": 0.21614583333333334,
+                    "y": 0.744047619047619,
+                    "uniqueID": "aed7eafb-aaaa-4e23-ad2a-ed538514f929",
+                    "ioValues": [
+                        {
+                            "name": "x length",
+                            "ioValue": 10
+                        },
+                        {
+                            "name": "y length",
+                            "ioValue": 5
+                        }
+                    ],
+                    "description": "Creates a new rectangle."
+                },
+                {
+                    "atomType": "Extrude",
+                    "name": "Extrude",
+                    "x": 0.310546875,
+                    "y": 0.7202380952380952,
+                    "uniqueID": "000b2e57-f262-4fba-ab13-c6a197cc295f",
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": "aed7eafb-aaaa-4e23-ad2a-ed538514f929"
+                        },
+                        {
+                            "name": "height",
+                            "ioValue": 50
+                        }
+                    ],
+                    "description": "Extrudes a 2D shape. Input can be negitive. "
+                },
+                {
+                    "atomType": "Move",
+                    "name": "Move",
+                    "x": 0.39713541666666663,
+                    "y": 0.8154761904761905,
+                    "uniqueID": "2bc91d3e-3a35-43ca-a41d-210ed3f7cfbe",
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": "000b2e57-f262-4fba-ab13-c6a197cc295f"
+                        },
+                        {
+                            "name": "xDist",
+                            "ioValue": -2.5
+                        },
+                        {
+                            "name": "yDist",
+                            "ioValue": 0
+                        },
+                        {
+                            "name": "zDist",
+                            "ioValue": -25
+                        }
+                    ],
+                    "description": "Moves a shape laterally in X, Y, Z."
+                },
+                {
+                    "atomType": "Code",
+                    "name": "Code",
+                    "x": 0.6197916666666666,
+                    "y": 0.7129337539432177,
+                    "uniqueID": "f8a0123a-6b4a-4c58-8be3-15c58f578b62",
+                    "ioValues": [
+                        {
+                            "name": "shape1",
+                            "ioValue": "1e1e3e09-d165-4b0e-87d7-ea3535dc435a"
+                        },
+                        {
+                            "name": "shape2",
+                            "ioValue": "0ec97b70-f6fc-4b56-bd6b-31f9cc4d4c2a"
+                        }
+                    ],
+                    "description": "Defines a Replicad code block.",
+                    "codeVersion": 1,
+                    "code": " \n//Inputs:[shape1, shape2]\n\n\nfunction lengthAlongDirection(shape, direction) {\n  let targetOrientation = new replicad.Vector([1, 0, 0]);\n  let rotationAxis = direction.cross(targetOrientation);\n  if (rotationAxis.Length != 0) {   // If direction isn't parallel to X axis..\n    rotationDegrees =\n      (Math.acos(\n        direction.dot(targetOrientation) /\n          (targetOrientation.Length * direction.Length)\n      ) *\n        360) /\n      (2 * Math.PI);\n  \n    shape = shape.clone()\n      .rotate(rotationDegrees, new replicad.Vector([0,0,0]), rotationAxis);\n  }\n\n  const bounds = shape.boundingBox.bounds;\n  return Math.abs(bounds[0][0] - bounds[1][0])\n}\n\nfunction vecStr(vec) {\n  return vec.x + \", \" + vec.y + \", \" + vec.z\n}\n\n/**\n * Return a new copy of shape1 with have of it's intersection with shape 2 removed\n * \n * Which half is selected is based on the shape of the intersectoin, we always split\n * the shared volume along its longest axis.\n */\nasync function performHalfLap(shape1, shape2) {\n  let wrapperShape = await Intersect(shape1, shape2)\n  let intersect = wrapperShape.geometry[0]\n  let boundingBox = intersect.boundingBox\n  let newBounds = undefined;\n  try {\n    newBounds = boundingBox.bounds;\n  } catch (error) {\n    // there' isn't an intersecting volume\n    console.log(\"no intersection. returning shape1 unmodified\")\n    return shape1\n  }\n\n  // collect candidate directions\n  const planarFaces = []\n  intersect.faces.forEach((face) => {\n    if (face.geomType == \"PLANE\") {\n      planarFaces.push(face)\n    }\n  });\n  const candidates = []\n  for (let i = 0; i < planarFaces.length; i++) {\n    for (let j = i + 1; j < planarFaces.length; j++) {\n      const vec = planarFaces[i].normalAt().cross(planarFaces[j].normalAt())\n      candidates.push(vec)\n    }\n  }\n\n  console.log(candidates.map((v) => {return [v.x, v.y, v.z]}))\n  // remove parallel candidates\n  for (var i = candidates.length - 1; i > 0; i--) {\n    for (var j = i - 1; j >= 0; j--) {\n      const v1 = candidates[i]\n      const v2 = candidates[j]\n      if (v1.cross(v2).Length == 0) { // parallel\n      //if (v1.x == v2.x && v1.y == v2.y && v1.z == v2.z) {\n        candidates.splice(j,1)\n        i = i - 1\n      }\n    }\n  }\n\n  console.log(candidates.map((v) => {return [v.x, v.y, v.z]}))\n  \n  if (candidates.length == 0) {\n    // Something is wrong, bail out without crashing\n    console.warn(\"unexpectely found no planar adjascent planar faces when doing half-lap\")\n    return shape1;\n  }\n\n  var maxLength = 0;\n  var splittingAxis = new replicad.Vector([1,0,0])\n  for (const axis of candidates) {\n    let len = lengthAlongDirection(intersect.clone(), axis)\n    if (len > maxLength) {\n      splittingAxis = axis;\n      maxLength = len\n    }\n  }\n\n  console.log(\"selected candidate:\")\n  console.log(maxLength)\n  console.log(vecStr(splittingAxis))\n\n\n  // get half of the intersected volume\n  const translationVec = splittingAxis.multiply(maxLength / 2)\n  const temporary = intersect.clone().translate(translationVec.x, translationVec.y, translationVec.z);\n  intersect = intersect.clone().cut(temporary);\n\n  wrapperShape.geometry[0] = temporary\n // return wrapperShape;\n\n let newShape1 = {\n    geometry: [shape1.geometry[0].clone().cut(intersect)],\n    tags: shape1.tags || [],\n    color: shape1.color,\n    plane: shape1.plane,\n    bom: shape1.bom || []\n  };\n  console.log(\"result for leaf: \")\n  console.log(newShape1)\n\n  return newShape1;\n\n//  return await Assembly([shape2, newShape1])//, cube]);\n}\n\n// choose midpoint\n         console.log(\"starting... \");\n         console.log(shape1)\n         console.log(shape2)\n         if (library[shape1] == undefined) {\n           throw new Error(\"Shape1 \" + shape1 + \" not a geometry id\")\n         }\n         if (library[shape2] == undefined) {\n           throw new Error(\"Shape2 \" + shape2 + \" not a geometry id\")\n         }\n\n         // TODO: someday we should pass the geoms directly, user should never have to deal with\n         // library lookups imo\n         shape1 = library[shape1]\n         shape2 = library[shape2]\n         \n\n         s2AsList = await AssemblyAsIterable(shape2);\n         console.log(\"s2AsList: \")\n         console.log(s2AsList);\n         let updatedShape1 = await AssemblyMap(shape1, async (s1leaf, _) => {\n            for (const el of s2AsList) {\n              s1leaf = await performHalfLap(s1leaf, el)\n            }\n            return s1leaf\n          })\n         console.log(\"done\");\n         console.log(updatedShape1)\n         const newShape2 = CutAssembly(shape2, [updatedShape1])\n         return Assembly([updatedShape1, newShape2])\n\n      \n\n      \n\n//      return Intersect(shape1, shape2)\n\n\n\n      //This makes a new copy of of the shape (to prevent garbage collection issues),\n      //and moves it in the X direction. Note that this will not work if the input is an assembly\n      /*let movedShape = importedShape.geometry[0].clone().translate([dist,0,0])\n      \n      //Console.log works for debugging to better see what is happening under the hood\n      console.log(\"Shape:\")\n      console.log(importedShape);\n      \n      //Shapes stored in the library have tags, a color, a plane, and a bill of materials like this. We don't modify them here\n      let shape1 = {\n        geometry: [movedShape],\n        tags: importedShape.tags,\n        color: importedShape.color,\n        plane: importedShape.plane,\n        bom: importedShape.bom\n      }\n      \n      //We could at this point return shape1 as a complete shape and it will be automatically written to the library for us\n      //return shape1\n      \n      //We can also create a new shape from scratch\n      let createdRectangle = replicad.drawRectangle(5,7)\n      //This is the plane we are going to put our new shape on\n      const newPlane = new Plane().pivot(0, 'Y');\n      //And we extrude the shape to make it 3D\n      let createdShape = createdRectangle.sketchOnPlane(newPlane).extrude(height)\n      \n      //For our new geometry we need to define the tags, color, plane, etc\n      let shape2 = {\n          geometry: [createdShape], \n          tags: [\"aTag\"],\n          color: '#A3CE5B',\n          plane: newPlane,\n          bom: []\n      }\n      \n      //Then we can return our created shape in just the same way\n      //return shape2\n      \n      //If we want to return both shapes at once, we can create an assembly with them\n      let anAssembly = {\n        geometry: [shape1, shape2], \n        tags: [\"aNewTag\"],\n        color: '#A3CF5B',\n        plane: newPlane,\n        bom: []\n      }\n      \n      //And we can return that in the same way\n      return anAssembly\n      \n      \n          /**\n          To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n          If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n          Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n          https://replicad.xyz/docs/introapp/UserGuide.html \n          Return a replicad object that includes geometry, color, tags and plane. \n      \n      \n          Example Code Atom:\n      \n            Inputs:[shape, x];\n      \n            let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n      \n            return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n      \n            - See more examples at _______ \n      \n      \n          */\n      "
+                },
+                {
+                    "atomType": "Rotate",
+                    "name": "Rotate",
+                    "x": 0.509765625,
+                    "y": 0.8392857142857143,
+                    "uniqueID": "1e1e3e09-d165-4b0e-87d7-ea3535dc435a",
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": "2bc91d3e-3a35-43ca-a41d-210ed3f7cfbe"
+                        },
+                        {
+                            "name": "x-axis degrees",
+                            "ioValue": 20
+                        },
+                        {
+                            "name": "y-axis degrees",
+                            "ioValue": 40
+                        },
+                        {
+                            "name": "z-axis degrees",
+                            "ioValue": 0
+                        }
+                    ],
+                    "description": "Rotates the input geometry around the X, Y, or Z axis. Inputs are degrees."
+                },
+                {
+                    "atomType": "Move",
+                    "name": "Move",
+                    "x": 0.4069010416666667,
+                    "y": 0.4107142857142857,
+                    "uniqueID": "71f6a492-e3b4-405f-b2dc-9e04df67fc9e",
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": "ca095cc1-be2a-488f-b812-f56ea339c71f"
+                        },
+                        {
+                            "name": "xDist",
+                            "ioValue": 0
+                        },
+                        {
+                            "name": "yDist",
+                            "ioValue": 0
+                        },
+                        {
+                            "name": "zDist",
+                            "ioValue": -15
+                        }
+                    ],
+                    "description": "Moves a shape laterally in X, Y, Z."
+                },
+                {
+                    "atomType": "Assembly",
+                    "name": "Assembly",
+                    "x": 0.45572916666666663,
+                    "y": 0.5446428571428571,
+                    "uniqueID": "292068e5-bc0f-49ba-9856-1330dc92a066",
+                    "ioValues": [
+                        {
+                            "name": "Shape 1",
+                            "ioValue": "71f6a492-e3b4-405f-b2dc-9e04df67fc9e"
+                        },
+                        {
+                            "name": "Shape 2",
+                            "ioValue": "ca095cc1-be2a-488f-b812-f56ea339c71f"
+                        }
+                    ],
+                    "description": "Pick between assembly and fusion to join input geometries. Assembly takes multiple shapes together into one, shapes higher in the inputs list will cut into shapes lower on the input list where they overlap. Fusion takes all shapes or sketches and fuses them permanently into a single shape"
+                },
+                {
+                    "atomType": "Rectangle",
+                    "name": "Rectangle",
+                    "x": 0.2713541666666667,
+                    "y": 0.4946428571428571,
+                    "uniqueID": "e55d5aad-2b18-426e-8a0e-ecac8e42fb59",
+                    "ioValues": [
+                        {
+                            "name": "x length",
+                            "ioValue": 15
+                        },
+                        {
+                            "name": "y length",
+                            "ioValue": 50
+                        }
+                    ],
+                    "description": "Creates a new rectangle."
+                },
+                {
+                    "atomType": "Extrude",
+                    "name": "Extrude",
+                    "x": 0.364453125,
+                    "y": 0.5095238095238095,
+                    "uniqueID": "8440124b-faa0-44f0-b035-ecb46088127b",
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": "63ce20ab-4e6b-42e0-bd2a-d72a61d46e6e"
+                        },
+                        {
+                            "name": "height",
+                            "ioValue": 5
+                        }
+                    ],
+                    "description": "Extrudes a 2D shape. Input can be negitive. "
+                },
+                {
+                    "atomType": "Rotate",
+                    "name": "Rotate",
+                    "x": 0.5345052083333334,
+                    "y": 0.4464285714285714,
+                    "uniqueID": "0ec97b70-f6fc-4b56-bd6b-31f9cc4d4c2a",
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": "292068e5-bc0f-49ba-9856-1330dc92a066"
+                        },
+                        {
+                            "name": "x-axis degrees",
+                            "ioValue": 0
+                        },
+                        {
+                            "name": "y-axis degrees",
+                            "ioValue": 40
+                        },
+                        {
+                            "name": "z-axis degrees",
+                            "ioValue": 0
+                        }
+                    ],
+                    "description": "Rotates the input geometry around the X, Y, or Z axis. Inputs are degrees."
+                },
+                {
+                    "atomType": "Code",
+                    "name": "Code",
+                    "x": 0.7231770833333333,
+                    "y": 0.8547619047619046,
+                    "uniqueID": "817c3071-392a-4633-8842-24eb8c5853fb",
+                    "ioValues": [
+                        {
+                            "name": "shape1",
+                            "ioValue": 10
+                        },
+                        {
+                            "name": "shape2",
+                            "ioValue": 10
+                        }
+                    ],
+                    "description": "Defines a Replicad code block.",
+                    "codeVersion": 1,
+                    "code": " \n      //Inputs:[shape1, shape2]\n      //This defines the molecules inputs and creates variables with the same names which can be referenced in the code\n\n\n      // Move intersector to the point of interest instead of always being at 0,0\n      // handle assembly inputs\n      // how to handle intersection shapes not aligned to z axis?\n          // this will break our cube cut logic\n      // better logic for selecting axis of sharing\nfunction rectFromBounds(bounds) {\n  console.log(\"make rect\")\n  console.log(bounds);\n  \n  let baseRectangle = replicad.drawRectangle(Math.abs(bounds[0][0] - bounds[1][0]), Math.abs(bounds[0][1] - bounds[1][1]))\n  const yPlane = new replicad.Plane().pivot(0, 'Y');\n  //And we extrude the shape to make it 3D\n  let createdShape = baseRectangle.sketchOnPlane(yPlane).extrude(Math.abs(bounds[0][2] - bounds[1][2]))\n  const transform = [\n    (bounds[0][0] + bounds[1][0]) / 2.0,\n    (bounds[0][1] + bounds[1][1]) / 2.0,\n    bounds[0][2]\n    ];\n  console.log(transform)\n  createdShape = createdShape.translate(transform)\n  let cube = {\n      geometry: [createdShape], \n      tags: [],\n      color: '#A3CE5B',\n      plane: yPlane,\n      bom: []\n  }\n\n  \n  return cube\n}\n\nasync function performHalfLap(shape1, shape2) {\n\n  //Takes the address and gets the shape from the library\n\n  let intersect = await Intersect(shape1, shape2)\n  // get z bounds\n  console.log(\"foo\")\n  console.log(intersect)\n  console.log(intersect.geometry[0].boundingBox)\n  let boundingBox = intersect.geometry[0].boundingBox\n  let newBounds = undefined;\n  try {\n    newBounds = boundingBox.bounds;\n  } catch (error) {\n    // there' isn't an intersecting volume\n    console.log(\"no intersection. returning shape1 unmodified\")\n    return shape1\n  }\n\n  console.log(\" bounds \")\n  console.log(newBounds)\n\n  newBounds[1][2] = (newBounds[0][2] + newBounds[1][2]) / 2.0;\n  let halfIntersect = rectFromBounds(newBounds)\n  console.log(halfIntersect)\n\n  // create cube to reduce to half of the intersection\n  // do the cutting\n // let remover = intersect.geometry[0].cut(halfIntersect.geometry[0])\n\n  // merge the half-intersection with one of our inputs (either?)\n  let newShape1 = {\n    geometry: [shape1.geometry[0].clone().cut(halfIntersect.geometry[0])],\n    tags: shape1.tags || [],\n    color: shape1.color,\n    plane: shape1.plane,\n    bom: shape1.bom || []\n  };\n  console.log(\"result for leaf: \")\n  console.log(newShape1)\n\n  return newShape1;\n//  return await Assembly([shape2, newShape1])//, cube]);\n}\n\n// choose midpoint\n         console.log(\"starting... \");\n         console.log(shape1)\n         console.log(shape2)\n         if (library[shape1] == undefined) {\n           throw new Error(\"Shape1 \" + shape1 + \" not a geometry id\")\n         }\n         if (library[shape2] == undefined) {\n           throw new Error(\"Shape2 \" + shape2 + \" not a geometry id\")\n         }\n\n         // TODO: someday we should pass the geoms directly, user should never have to deal with\n         // library lookups imo\n         shape1 = library[shape1]\n         shape2 = library[shape2]\n         \n\n         s2AsList = await AssemblyAsIterable(shape2);\n         console.log(\"s2AsList: \")\n         console.log(s2AsList);\n         let updatedShape1 = await AssemblyMap(shape1, async (s1leaf, _) => {\n          // let individualIntersects = AssemblyMap(shape2, (s2leaf, _) => {\n           //  return performHalfLap(s1leaf, s2leaf)\n           //})\n          // return individualIntersects;\n            for (const el of s2AsList) {\n              s1leaf = await performHalfLap(s1leaf, el)\n            }\n            return s1leaf\n          })\n         console.log(\"done\");\n         console.log(updatedShape1)\n         const newShape2 = CutAssembly(shape2, [updatedShape1])\n         return Assembly([updatedShape1, newShape2])\n\n      \n\n      \n\n//      return Intersect(shape1, shape2)\n\n\n\n      //This makes a new copy of of the shape (to prevent garbage collection issues),\n      //and moves it in the X direction. Note that this will not work if the input is an assembly\n      /*let movedShape = importedShape.geometry[0].clone().translate([dist,0,0])\n      \n      //Console.log works for debugging to better see what is happening under the hood\n      console.log(\"Shape:\")\n      console.log(importedShape);\n      \n      //Shapes stored in the library have tags, a color, a plane, and a bill of materials like this. We don't modify them here\n      let shape1 = {\n        geometry: [movedShape],\n        tags: importedShape.tags,\n        color: importedShape.color,\n        plane: importedShape.plane,\n        bom: importedShape.bom\n      }\n      \n      //We could at this point return shape1 as a complete shape and it will be automatically written to the library for us\n      //return shape1\n      \n      //We can also create a new shape from scratch\n      let createdRectangle = replicad.drawRectangle(5,7)\n      //This is the plane we are going to put our new shape on\n      const newPlane = new Plane().pivot(0, 'Y');\n      //And we extrude the shape to make it 3D\n      let createdShape = createdRectangle.sketchOnPlane(newPlane).extrude(height)\n      \n      //For our new geometry we need to define the tags, color, plane, etc\n      let shape2 = {\n          geometry: [createdShape], \n          tags: [\"aTag\"],\n          color: '#A3CE5B',\n          plane: newPlane,\n          bom: []\n      }\n      \n      //Then we can return our created shape in just the same way\n      //return shape2\n      \n      //If we want to return both shapes at once, we can create an assembly with them\n      let anAssembly = {\n        geometry: [shape1, shape2], \n        tags: [\"aNewTag\"],\n        color: '#A3CF5B',\n        plane: newPlane,\n        bom: []\n      }\n      \n      //And we can return that in the same way\n      return anAssembly\n      \n      \n          /**\n          To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n          If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n          Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n          https://replicad.xyz/docs/introapp/UserGuide.html \n          Return a replicad object that includes geometry, color, tags and plane. \n      \n      \n          Example Code Atom:\n      \n            Inputs:[shape, x];\n      \n            let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n      \n            return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n      \n            - See more examples at _______ \n      \n      \n          */\n      "
+                },
+                {
+                    "atomType": "Code",
+                    "name": "Code",
+                    "x": 0.6276041666666667,
+                    "y": 0.21726190476190477,
+                    "uniqueID": "2e438740-337b-4980-b5c3-4a22a445dab2",
+                    "ioValues": [
+                        {
+                            "name": "shape1",
+                            "ioValue": "36047705-8b56-4cc9-881b-262c67376885"
+                        },
+                        {
+                            "name": "shape2",
+                            "ioValue": "ff4416c8-cd15-4380-9f93-de58448934f5"
+                        }
+                    ],
+                    "description": "Defines a Replicad code block.",
+                    "codeVersion": 1,
+                    "code": " \n//Inputs:[shape1, shape2]\n\n\nfunction lengthAlongDirection(shape, direction) {\n  let targetOrientation = new replicad.Vector([1, 0, 0]);\n  let rotationAxis = direction.cross(targetOrientation);\n  if (rotationAxis.Length != 0) {   // If direction isn't parallel to X axis..\n    rotationDegrees =\n      (Math.acos(\n        direction.dot(targetOrientation) /\n          (targetOrientation.Length * direction.Length)\n      ) *\n        360) /\n      (2 * Math.PI);\n  \n    shape = shape.clone()\n      .rotate(rotationDegrees, new replicad.Vector([0,0,0]), rotationAxis);\n  }\n\n  const bounds = shape.boundingBox.bounds;\n  return Math.abs(bounds[0][0] - bounds[1][0])\n}\n\nfunction vecStr(vec) {\n  return vec.x + \", \" + vec.y + \", \" + vec.z\n}\n\n/**\n * Return a new copy of shape1 with have of it's intersection with shape 2 removed\n * \n * Which half is selected is based on the shape of the intersectoin, we always split\n * the shared volume along its longest axis.\n */\nasync function performHalfLap(shape1, shape2) {\n  let wrapperShape = await Intersect(shape1, shape2)\n  let intersect = wrapperShape.geometry[0]\n  let boundingBox = intersect.boundingBox\n  let newBounds = undefined;\n  try {\n    newBounds = boundingBox.bounds;\n  } catch (error) {\n    // there' isn't an intersecting volume\n    console.log(\"no intersection. returning shape1 unmodified\")\n    return shape1\n  }\n\n  // collect candidate directions\n  const planarFaces = []\n  intersect.faces.forEach((face) => {\n    if (face.geomType == \"PLANE\") {\n      planarFaces.push(face)\n    }\n  });\n  const candidates = []\n  for (let i = 0; i < planarFaces.length; i++) {\n    for (let j = i + 1; j < planarFaces.length; j++) {\n      const vec = planarFaces[i].normalAt().cross(planarFaces[j].normalAt())\n      candidates.push(vec)\n    }\n  }\n\n  console.log(candidates.map((v) => {return [v.x, v.y, v.z]}))\n  // remove parallel candidates\n  for (var i = candidates.length - 1; i > 0; i--) {\n    for (var j = i - 1; j >= 0; j--) {\n      const v1 = candidates[i]\n      const v2 = candidates[j]\n      if (v1.cross(v2).Length == 0) { // parallel\n      //if (v1.x == v2.x && v1.y == v2.y && v1.z == v2.z) {\n        candidates.splice(j,1)\n        i = i - 1\n      }\n    }\n  }\n\n  console.log(candidates.map((v) => {return [v.x, v.y, v.z]}))\n  \n  if (candidates.length == 0) {\n    // Something is wrong, bail out without crashing\n    console.warn(\"unexpectely found no planar adjascent planar faces when doing half-lap\")\n    return shape1;\n  }\n\n  var maxLength = 0;\n  var splittingAxis = new replicad.Vector([1,0,0])\n  for (const axis of candidates) {\n    let len = lengthAlongDirection(intersect.clone(), axis)\n    if (len > maxLength) {\n      splittingAxis = axis;\n      maxLength = len\n    }\n  }\n\n  console.log(\"selected candidate:\")\n  console.log(maxLength)\n  console.log(vecStr(splittingAxis))\n\n\n  // get half of the intersected volume\n  const translationVec = splittingAxis.multiply(maxLength / 2)\n  const temporary = intersect.clone().translate(translationVec.x, translationVec.y, translationVec.z);\n  intersect = intersect.clone().cut(temporary);\n\n  wrapperShape.geometry[0] = temporary\n // return wrapperShape;\n\n let newShape1 = {\n    geometry: [shape1.geometry[0].clone().cut(intersect)],\n    tags: shape1.tags || [],\n    color: shape1.color,\n    plane: shape1.plane,\n    bom: shape1.bom || []\n  };\n  console.log(\"result for leaf: \")\n  console.log(newShape1)\n\n  return newShape1;\n\n//  return await Assembly([shape2, newShape1])//, cube]);\n}\n\n// choose midpoint\n         console.log(\"starting... \");\n         console.log(shape1)\n         console.log(shape2)\n         if (library[shape1] == undefined) {\n           throw new Error(\"Shape1 \" + shape1 + \" not a geometry id\")\n         }\n         if (library[shape2] == undefined) {\n           throw new Error(\"Shape2 \" + shape2 + \" not a geometry id\")\n         }\n\n         // TODO: someday we should pass the geoms directly, user should never have to deal with\n         // library lookups imo\n         shape1 = library[shape1]\n         shape2 = library[shape2]\n         \n\n         s2AsList = await AssemblyAsIterable(shape2);\n         console.log(\"s2AsList: \")\n         console.log(s2AsList);\n         let updatedShape1 = await AssemblyMap(shape1, async (s1leaf, _) => {\n            for (const el of s2AsList) {\n              s1leaf = await performHalfLap(s1leaf, el)\n            }\n            return s1leaf\n          })\n         console.log(\"done\");\n         console.log(updatedShape1)\n         const newShape2 = CutAssembly(shape2, [updatedShape1])\n         return Assembly([updatedShape1, newShape2])\n\n      \n\n      \n\n//      return Intersect(shape1, shape2)\n\n\n\n      //This makes a new copy of of the shape (to prevent garbage collection issues),\n      //and moves it in the X direction. Note that this will not work if the input is an assembly\n      /*let movedShape = importedShape.geometry[0].clone().translate([dist,0,0])\n      \n      //Console.log works for debugging to better see what is happening under the hood\n      console.log(\"Shape:\")\n      console.log(importedShape);\n      \n      //Shapes stored in the library have tags, a color, a plane, and a bill of materials like this. We don't modify them here\n      let shape1 = {\n        geometry: [movedShape],\n        tags: importedShape.tags,\n        color: importedShape.color,\n        plane: importedShape.plane,\n        bom: importedShape.bom\n      }\n      \n      //We could at this point return shape1 as a complete shape and it will be automatically written to the library for us\n      //return shape1\n      \n      //We can also create a new shape from scratch\n      let createdRectangle = replicad.drawRectangle(5,7)\n      //This is the plane we are going to put our new shape on\n      const newPlane = new Plane().pivot(0, 'Y');\n      //And we extrude the shape to make it 3D\n      let createdShape = createdRectangle.sketchOnPlane(newPlane).extrude(height)\n      \n      //For our new geometry we need to define the tags, color, plane, etc\n      let shape2 = {\n          geometry: [createdShape], \n          tags: [\"aTag\"],\n          color: '#A3CE5B',\n          plane: newPlane,\n          bom: []\n      }\n      \n      //Then we can return our created shape in just the same way\n      //return shape2\n      \n      //If we want to return both shapes at once, we can create an assembly with them\n      let anAssembly = {\n        geometry: [shape1, shape2], \n        tags: [\"aNewTag\"],\n        color: '#A3CF5B',\n        plane: newPlane,\n        bom: []\n      }\n      \n      //And we can return that in the same way\n      return anAssembly\n      \n      \n          /**\n          To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n          If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n          Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n          https://replicad.xyz/docs/introapp/UserGuide.html \n          Return a replicad object that includes geometry, color, tags and plane. \n      \n      \n          Example Code Atom:\n      \n            Inputs:[shape, x];\n      \n            let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n      \n            return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n      \n            - See more examples at _______ \n      \n      \n          */\n      "
+                },
+                {
+                    "atomType": "Input",
+                    "name": "Assembly1",
+                    "x": 0.029699999999999997,
+                    "y": 0.27976190476190477,
+                    "uniqueID": "c48c20d8-3e9a-443f-8235-e71926c1abf1",
+                    "ioValues": [],
+                    "description": "Adds an input to the parent molecule. If the parent molecule is the top level of the project then the input will be available when the project is shared or imported into another project. Name is editable",
+                    "type": "geometry"
+                },
+                {
+                    "atomType": "Input",
+                    "name": "Assembly2",
+                    "x": 0.029699999999999997,
+                    "y": 0.5416666666666666,
+                    "uniqueID": "dc9424aa-8f51-4430-8dc8-f27605d709ca",
+                    "ioValues": [],
+                    "description": "Adds an input to the parent molecule. If the parent molecule is the top level of the project then the input will be available when the project is shared or imported into another project. Name is editable",
+                    "type": "geometry"
+                },
+                {
+                    "atomType": "CutLayout",
+                    "name": "Cut Layout",
+                    "x": 0.7565104166666666,
+                    "y": 0.5297619047619048,
+                    "uniqueID": "fc74a1ee-f84f-4e9e-ac1b-a5d8eda4347e",
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": "f8a0123a-6b4a-4c58-8be3-15c58f578b62"
+                        },
+                        {
+                            "name": "Sheet Width",
+                            "ioValue": 1219
+                        },
+                        {
+                            "name": "Sheet Height",
+                            "ioValue": 2438
+                        },
+                        {
+                            "name": "Part Padding",
+                            "ioValue": 6
+                        }
+                    ],
+                    "description": "Extracts all parts tagged for cutting and lays them out on a sheet to cut.",
+                    "placements": [
+                        [
+                            {
+                                "id": 1,
+                                "rotate": 300,
+                                "translate": {
+                                    "x": 27.916049405944435,
+                                    "y": 23.727104315558762
+                                }
+                            },
+                            {
+                                "id": 2,
+                                "rotate": 300,
+                                "translate": {
+                                    "x": 27.9160494103428,
+                                    "y": 48.20675551555876
+                                }
+                            },
+                            {
+                                "id": 0,
+                                "rotate": 90,
+                                "translate": {
+                                    "x": 47.93021519473496,
+                                    "y": 71.84124697498925
+                                }
+                            }
+                        ]
+                    ]
+                }
+            ],
+            "allConnectors": [
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": "3dd63a27-c007-4813-baa0-6c05e3a89379",
+                    "ap2ID": "ca095cc1-be2a-488f-b812-f56ea339c71f"
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": "ca095cc1-be2a-488f-b812-f56ea339c71f",
+                    "ap2ID": "71f6a492-e3b4-405f-b2dc-9e04df67fc9e"
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "Shape 2",
+                    "ap2Primary": false,
+                    "ap1ID": "ca095cc1-be2a-488f-b812-f56ea339c71f",
+                    "ap2ID": "292068e5-bc0f-49ba-9856-1330dc92a066"
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": "aed7eafb-aaaa-4e23-ad2a-ed538514f929",
+                    "ap2ID": "000b2e57-f262-4fba-ab13-c6a197cc295f"
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": "000b2e57-f262-4fba-ab13-c6a197cc295f",
+                    "ap2ID": "2bc91d3e-3a35-43ca-a41d-210ed3f7cfbe"
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": "2bc91d3e-3a35-43ca-a41d-210ed3f7cfbe",
+                    "ap2ID": "1e1e3e09-d165-4b0e-87d7-ea3535dc435a"
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": false,
+                    "ap1ID": "f8a0123a-6b4a-4c58-8be3-15c58f578b62",
+                    "ap2ID": "fc74a1ee-f84f-4e9e-ac1b-a5d8eda4347e"
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "shape1",
+                    "ap2Primary": false,
+                    "ap1ID": "1e1e3e09-d165-4b0e-87d7-ea3535dc435a",
+                    "ap2ID": "f8a0123a-6b4a-4c58-8be3-15c58f578b62"
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "Shape 1",
+                    "ap2Primary": false,
+                    "ap1ID": "71f6a492-e3b4-405f-b2dc-9e04df67fc9e",
+                    "ap2ID": "292068e5-bc0f-49ba-9856-1330dc92a066"
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": "292068e5-bc0f-49ba-9856-1330dc92a066",
+                    "ap2ID": "0ec97b70-f6fc-4b56-bd6b-31f9cc4d4c2a"
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "shape2",
+                    "ap2Primary": false,
+                    "ap1ID": "0ec97b70-f6fc-4b56-bd6b-31f9cc4d4c2a",
+                    "ap2ID": "f8a0123a-6b4a-4c58-8be3-15c58f578b62"
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "number or geometry",
+                    "ap2Primary": false,
+                    "ap1ID": "2e438740-337b-4980-b5c3-4a22a445dab2",
+                    "ap2ID": "b204fff1-5e20-4658-a839-5cc8691f5fe8"
+                },
+                {
+                    "ap1Name": "number or geometry",
+                    "ap2Name": "shape1",
+                    "ap2Primary": false,
+                    "ap1ID": "c48c20d8-3e9a-443f-8235-e71926c1abf1",
+                    "ap2ID": "2e438740-337b-4980-b5c3-4a22a445dab2"
+                },
+                {
+                    "ap1Name": "number or geometry",
+                    "ap2Name": "shape2",
+                    "ap2Primary": false,
+                    "ap1ID": "dc9424aa-8f51-4430-8dc8-f27605d709ca",
+                    "ap2ID": "2e438740-337b-4980-b5c3-4a22a445dab2"
+                }
+            ],
+            "parentRepo": {
+                "privateRepo": false,
+                "repoName": "HalfLap",
+                "dateCreated": "2025-05-30T17:34:24Z",
+                "readMe": "https://raw.githubusercontent.com/tristan-huber/HalfLap/master/README.md?sanitize=true",
+                "yyyy": 2025,
+                "topMoleculeID": 1748626464674,
+                "githubMoleculesUsed": [],
+                "html_url": "https://github.com/tristan-huber/HalfLap",
+                "topics": [
+                    "abundance-tool"
+                ],
+                "parentRepo": null,
+                "forks": 0,
+                "dateModified": "739426",
+                "ranking": 0,
+                "searchField": "halflap tristan-huber molecule to fix intersections into a half-lap joint style abundance-tool",
+                "owner": "tristan-huber",
+                "description": "Molecule to fix intersections into a half-lap joint style",
+                "contentURL": "https://raw.githubusercontent.com/tristan-huber/HalfLap/master/project.abundance?sanitize=true",
+                "svgURL": "https://raw.githubusercontent.com/tristan-huber/HalfLap/master/project.svg?sanitize=true",
+                "isLocal": false
+            },
+            "unitsKey": "MM",
+            "fileTypeVersion": 1,
+            "compiledBom": []
+        },
+        {
+            "atomType": "CutLayout",
+            "name": "Cut Layout",
+            "x": 0.6415343915343915,
+            "y": 0.8212290502793296,
+            "uniqueID": "c9719ad0-4e81-4266-ac72-fd60d7105460",
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": "41ea230c-4c26-4588-894a-7d324f2914ae"
+                },
+                {
+                    "name": "Sheet Width",
+                    "ioValue": 1219
+                },
+                {
+                    "name": "Sheet Height",
+                    "ioValue": 2438
+                },
+                {
+                    "name": "Part Padding",
+                    "ioValue": 6
+                }
+            ],
+            "description": "Extracts all parts tagged for cutting and lays them out on a sheet to cut.",
+            "placements": []
         }
     ],
-    "allConnectors": [],
+    "allConnectors": [
+        {
+            "ap1Name": "Geometry",
+            "ap2Name": "Assembly1",
+            "ap2Primary": false,
+            "ap1ID": "36047705-8b56-4cc9-881b-262c67376885",
+            "ap2ID": "41ea230c-4c26-4588-894a-7d324f2914ae"
+        },
+        {
+            "ap1Name": "Geometry",
+            "ap2Name": "Assembly2",
+            "ap2Primary": false,
+            "ap1ID": "ff4416c8-cd15-4380-9f93-de58448934f5",
+            "ap2ID": "41ea230c-4c26-4588-894a-7d324f2914ae"
+        },
+        {
+            "ap1Name": "Geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": false,
+            "ap1ID": "41ea230c-4c26-4588-894a-7d324f2914ae",
+            "ap2ID": "c9719ad0-4e81-4266-ac72-fd60d7105460"
+        },
+        {
+            "ap1Name": "Geometry",
+            "ap2Name": "number or geometry",
+            "ap2Primary": false,
+            "ap1ID": "41ea230c-4c26-4588-894a-7d324f2914ae",
+            "ap2ID": "51c1caa5-8e1e-4fcf-b206-f4ab3d284c71"
+        }
+    ],
     "unitsKey": "MM",
     "fileTypeVersion": 1,
     "compiledBom": {},
